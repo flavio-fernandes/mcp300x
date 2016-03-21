@@ -34,7 +34,6 @@ int Mcp300x::readAnalog(int pinChannel) const {
   // toggle cs and start clock low  
   digitalWrite(pinChipSelect, HIGH);
   digitalWrite(pinClock, LOW);
-  delay(1);  // let things settle in...
   digitalWrite(pinChipSelect, LOW);
   
   for (int i = 0; i < cmdOutBits; ++i) {
@@ -55,6 +54,7 @@ int Mcp300x::readAnalog(int pinChannel) const {
   }
 
   tickClock(); // read (skip) null bit
+  digitalWrite(pinChipSelect, HIGH);
   
   return valueOut;
 }
