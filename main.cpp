@@ -22,8 +22,8 @@ static struct argp_option options[] = {
   {"chipSelect", 's', "gpioPin",      0,                   "Chip Select GPIO pin" },
   {"delay",      'd', "milliseconds", 0,                   "Delay per sample (0 => none)" },
   {"repeats",    'r', "count",        OPTION_ARG_OPTIONAL, "Number of sample reads (0 => infinite)" },
-  {"mpc3002",    '2', 0,              0,                   "Using mpc3002 (default)" }, 
-  {"mpc3008",    '8', 0,              0,                   "Using mpc3008" }, 
+  {"mcp3002",    '2', 0,              0,                   "Using mcp3002 (default)" }, 
+  {"mcp3008",    '8', 0,              0,                   "Using mcp3008" }, 
   {0}
 };
 
@@ -74,7 +74,7 @@ static error_t parse_opt(int key, char* arg, struct argp_state* state) {
     break;
   case '2':
     if (arguments->mcpParamProvided && !arguments->isMcp3002) {
-      cout << "Error: mpc3002 and mpc3008 cannot be used together" << endl;;
+      cout << "Error: mcp3002 and mcp3008 cannot be used together" << endl;;
       argp_usage(state);
     }
     arguments->isMcp3002 = true;
@@ -82,7 +82,7 @@ static error_t parse_opt(int key, char* arg, struct argp_state* state) {
     break;
   case '8':
     if (arguments->mcpParamProvided && arguments->isMcp3002) {
-      cout << "Error: mpc3002 and mpc3008 cannot be used together" << endl;;
+      cout << "Error: mcp3002 and mcp3008 cannot be used together" << endl;;
       argp_usage(state);
     }
     arguments->isMcp3002 = false;

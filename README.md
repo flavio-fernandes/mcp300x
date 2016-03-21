@@ -1,7 +1,7 @@
 # mcp300x
 c++ codebase to control analog to digital converter in Raspberry Pi
 
-This small c++ codebase uses the [wiringPi][wpi] library to control a [mpc300x][mpc] analog to digital converter (ADC). You can use this as a standalone program, or embed it into your [raspberry pi][rpi] project.
+This small c++ codebase uses the [wiringPi][wpi] library to control a [mcp300x][mcp] analog to digital converter (ADC). You can use this as a standalone program, or embed it into your [raspberry pi][rpi] project.
 
 ### Install steps
 
@@ -26,8 +26,8 @@ To use the standalone program, call **./mcp300x** or copy it to a location used 
     Usage: mcp300x [OPTION...] 
     mcp300x, a simple program to read analog values from Mcp3002 or Mcp3008
 
-      -2, --mpc3002              Using mpc3002 (default)
-      -8, --mpc3008              Using mpc3008
+      -2, --mcp3002              Using mcp3002 (default)
+      -8, --mcp3008              Using mcp3008
       -c, --clock=gpioPin        Clock GPIO pin
       -d, --delay=milliseconds   Delay per sample (0 => none)
       -i, --digitaln=gpioPin, --mosi=gpioPin
@@ -52,6 +52,6 @@ Enjoy!
 
 [wpi]: http://wiringpi.com/download-and-install/ "Wiring Pi"
 [rpi]: https://www.raspberrypi.org/ "Raspberry Pi"
-[mpc]: http://educypedia.karadimov.info/library/21841A.pdf "Analog-to-Digital Converter"
+[mcp]: http://educypedia.karadimov.info/library/21841A.pdf "Analog-to-Digital Converter"
 [maincpp]: https://github.com/flavio-fernandes/mcp300x/blob/master/main.cpp "main.cpp"
 [srcdir]: https://github.com/flavio-fernandes/mcp300x/tree/master/src "src directory"
