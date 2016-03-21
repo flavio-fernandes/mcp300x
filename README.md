@@ -5,10 +5,6 @@ This small c++ codebase uses the [wiringPi][wpi] library to control a [mpc300x][
 
 ### Install steps
 
-1) Install the **build essential package**
-1) Install [wiringPi][wpi]
-1) Clone and build this project
-
 ##### 1) Install the **build essential package**
     sudo apt-get install build-essential
 
@@ -43,10 +39,19 @@ To use the standalone program, call **./mcp300x** or copy it to a location used 
 
 The default gpio pins are hard coded in _[main.cpp][maincpp]_. Feel free to modify them to suit your needs.
 
-In order to use the Mcp300x code, use the files located in the **src** directory. They should be self contained and easy enough to port over to your project. If not, please submit a pull request and help me make this better. Enjoy!
+In order to use the Mcp300x code, use the files located in the **[src][srcdir]** directory. They should be self contained and easy enough to port over to your project. If not, please submit a pull request and help me make this better.
+
+Last, but certainly not least, let me list a few additional links that were essential in the making of this repo:
+  - [Microchip doc](http://ww1.microchip.com/downloads/en/DeviceDoc/21294C.pdf)
+  - [Adafruit Learn](https://learn.adafruit.com/reading-a-analog-in-and-controlling-audio-volume-with-the-raspberry-pi)
+  - [Ladyada Youtube](https://youtu.be/6OCuAdEn9ZI?t=17m45s)
+  - [dmt195 today](https://dmt195.wordpress.com/2012/09/26/mcp3002-example-code-for-raspberry-pi-adc-through-spi/)
+  - [Arduino Wiring](https://ms-iot.github.io/content/en-US/win10/samples/arduino-wiring/Potentiometer.htm)
+
+Enjoy!
 
 [wpi]: http://wiringpi.com/download-and-install/ "Wiring Pi"
 [rpi]: https://www.raspberrypi.org/ "Raspberry Pi"
 [mpc]: http://educypedia.karadimov.info/library/21841A.pdf "Analog-to-Digital Converter"
 [maincpp]: https://github.com/flavio-fernandes/mcp300x/blob/master/main.cpp "main.cpp"
-
+[srcdir]: https://github.com/flavio-fernandes/mcp300x/tree/master/src "src directory"
