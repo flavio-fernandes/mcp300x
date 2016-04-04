@@ -10,12 +10,12 @@ This small c++ codebase uses the [wiringPi][wpi] library to control a [mcp300x][
 
 ##### 2) Install [wiringPi][wpi]
     cd someDir
-    git clone git://git.drogon.net/wiringPi.git
+    git clone git://git.drogon.net/wiringPi
     cd wiringPi && ./build
     
 ##### 3) Clone and build this project
     cd someDir
-    git clone https://github.com/flavio-fernandes/mcp300x.git
+    git clone https://github.com/flavio-fernandes/mcp300x
     cd mcp300x && make
 
 ### Usage
